@@ -1,0 +1,93 @@
+/* ---------------------------------------------------
+   LIST STYLE
+----------------------------------------------------- */
+
+/* list-item */
+
+/* any item (used by list-item, list-input, list-stats */
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0;
+  padding: 12px 0 10px 10px;
+  background-color: #e9ecef;
+  box-shadow: 3px 3px 10px #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.1s ease-in-out;
+}
+
+.item:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 3px 3px 10px #d0ebff;
+  transition: all 0.1s ease-in-out;
+}
+
+.item p {
+  margin-bottom: 5px;
+  padding-left: 9px;
+}
+
+/* List */
+
+#list-items-wrapper {
+  width: 85vw;
+  max-width: 650px;
+  min-width: 250px;
+}
+
+/* ---------------------------------------------------
+    SVG STYLE
+----------------------------------------------------- */
+
+
+/* cursor pointer when hovering over SVG */
+.svg-wrapper {
+    cursor: pointer;
+  }
+  
+  /* svg changes size on hover and click */
+  .svg-wrapper:hover svg {
+    transform: scale(1.05, 1.05);
+    transition: transform 0.2s ease-in-out; 
+  }
+  
+  .svg-wrapper:active svg {
+    transform: scale(0.95, 0.95);
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  /* svg color, changes on hover of element with class `.item` */
+  .item svg {
+    stroke: #adb5bd;
+    transition: stroke 0.1s ease-in-out;
+  }
+  
+  .item:hover svg {
+    stroke: #495057;
+    transition: stroke 0.1s ease-in-out;
+  }
+  
+  /* svg trashcan color changes on hover of trashcan */
+  .item .trash-svg:hover svg {
+    stroke: black;
+    transition: stroke 0.2s ease-in-out;
+  }
+  
+  /* svg checkbox color green */
+  .item .circle-svg svg {
+    stroke: #724AFF;
+    transition: stroke 0.2s ease-in-out;
+  }
+  
+  .item .check-circle-svg svg {
+    stroke: #27CC2D;
+    transition: stroke 0.2s ease-in-out;
+  }
+  
+  /* make plus and trashcan svg go to right */
+  .trash-svg, .plus-circle-svg {
+    margin-left: auto;
+    padding: 0 10px;
+  }
